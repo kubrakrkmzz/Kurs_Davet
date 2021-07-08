@@ -1,0 +1,59 @@
+﻿@model Kurs_Davet.Models.Bilgiler  
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>BilgiFormu</title>
+</head>
+<body>
+    <div> Bu sayfa Bilgileri almak için oluşturulmuş bir view sayfası</div>
+
+    <form asp-action="BilgiFormu" method="post">
+        <div>
+
+            <label asp-for="Ad">Adınız:</label> @*tırnak içerisindeki Ad Modelsdeki Bilgiler classından geliyor.programın bunu algılaması için başa Models klasörünü yazıyoruz. *@
+            <input asp-for="Ad" /> @*textbox*@
+        </div>
+
+        <div>
+
+            <label asp-for="Soyad">Soyadınız:</label>
+            <input asp-for="Soyad" />
+        </div>
+        <div>
+
+            <label asp-for="Email">Emailinizi Giriniz:</label>
+            <input asp-for="Email" />
+        </div>
+
+        <div>
+
+            <label asp-for="Telefon">Telefon Numaranızı Giriniz:</label>
+            <input asp-for="Telefon" />
+        </div>
+
+        <div>
+
+            <label>Hangi kursa katılacaksınız?</label>
+            <select asp-for="Katilim">
+            <option value="">Lütfen Bir Seçim Yapın</option>
+
+            <option value="0">Matematik</option>
+
+            <option value="1">Türkçe</option>
+
+            </select>
+        </div>
+        <button type="submit">Cevabını Gönderin</button>
+
+    </form>
+
+
+
+</body>
+</html>
