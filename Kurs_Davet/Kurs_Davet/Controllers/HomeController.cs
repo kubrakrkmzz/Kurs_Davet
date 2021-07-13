@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace Kurs_Davet.Controllers
 {
     public class HomeController : Controller
@@ -23,11 +24,27 @@ namespace Kurs_Davet.Controllers
             return View();
         }
 
+        [HttpGet] //formun yeniden yüklenmesi sağlanır
         public ViewResult BilgiFormu() //ViewResult ile Views klasöründe Controller adıyla Method ismiyle .cshtml uzantılı dosya arayacaktır.
         {
             return View();
         }
 
+        [HttpPost] //Tarayıcı tarafından post isteği gönderilerek verilerin sunucuya iletilmesi sağlanır
+        public ViewResult BilgiFormu(Bilgiler KatilimciCevabi)
+        {
+
+            Repository.CevapEkle(KatilimciCevabi);
+
+            return View("Tesekkurler", KatilimciCevabi);
+        }
+
+
+        public ViewResult CevaplariListele()
+        {
+            //Repositorydeki Cevaplardaki katilimi true olanları döndür. x=Repository.Bilgiler
+            return View(Repository.Bilgiler.Where(x => x.Katilim == true));
+        }
 
         public IActionResult Privacy()
         {

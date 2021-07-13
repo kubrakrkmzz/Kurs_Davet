@@ -109,3 +109,5 @@ C:\Users\Berkan\source\repos\Kurs_Davet\Kurs_Davet\bin\Debug\netcoreapp3.1\tr\Mi
 C:\Users\Berkan\source\repos\Kurs_Davet\Kurs_Davet\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Berkan\source\repos\Kurs_Davet\Kurs_Davet\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Berkan\source\repos\Kurs_Davet\Kurs_Davet\obj\Debug\netcoreapp3.1\Razor\Views\Home\BilgiFormu.cshtml.g.cs
+C:\Users\Berkan\source\repos\Kurs_Davet\Kurs_Davet\obj\Debug\netcoreapp3.1\Razor\Views\Home\Tesekkurler.cshtml.g.cs
+C:\Users\Berkan\source\repos\Kurs_Davet\Kurs_Davet\obj\Debug\netcoreapp3.1\Razor\Views\Home\CevaplariListele.cshtml.g.cs

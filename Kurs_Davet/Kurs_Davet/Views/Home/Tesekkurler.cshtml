@@ -1,0 +1,34 @@
+﻿
+@model Kurs_Davet.Models.Bilgiler
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Tesekkurler</title>
+</head>
+<body>
+    <div>
+        <h1>Bilgi verdiğiniz için teşekkürler, @Model.Ad @Model.Soyad</h1>
+
+        @if (Model.Katilim == true)
+        {
+            @: Kursumuza katılım sağladığınız için teşekkür ederiz.
+        }
+
+        else
+        {
+            @: Bu kursu kaçırdığınız için üzgünüz, tekrar görüşmek üzere.
+        }
+
+    </div>
+
+    Kursa katılım sağlayacakları görmek için <a asp-action="CevaplariListele">buraya</a> tıklayınız.
+
+
+</body>
+</html>
