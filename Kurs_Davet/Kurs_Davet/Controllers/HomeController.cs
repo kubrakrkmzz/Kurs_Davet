@@ -33,10 +33,17 @@ namespace Kurs_Davet.Controllers
         [HttpPost] //Tarayıcı tarafından post isteği gönderilerek verilerin sunucuya iletilmesi sağlanır
         public ViewResult BilgiFormu(Bilgiler KatilimciCevabi)
         {
+            if (ModelState.IsValid) {
+                
+                Repository.CevapEkle(KatilimciCevabi);
+                return View("Tesekkurler", KatilimciCevabi);
 
-            Repository.CevapEkle(KatilimciCevabi);
-
-            return View("Tesekkurler", KatilimciCevabi);
+           }
+            else
+            {
+                return View();
+            }
+            
         }
 
 
