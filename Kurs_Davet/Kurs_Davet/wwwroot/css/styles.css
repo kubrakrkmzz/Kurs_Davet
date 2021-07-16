@@ -1,0 +1,21 @@
+﻿.field-validation-error { /* bir hata görüntülenirken kullanılır*/
+    color: red;
+}
+
+.field-validation-valid { /*hata olmadığında*/
+    display: none; /*Görüntü yok*/
+}
+
+.input-validation-error{
+    font : 100dp solid red;
+       background-color : #fee;
+}
+
+.validation-summary-errors{
+    font-weight: bold;
+    color: #ff0000;
+}
+.validation-summary-valid{
+    display: none;
+}
+
